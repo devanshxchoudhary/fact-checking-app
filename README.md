@@ -72,3 +72,15 @@ Run app:
 bash
 Copy code
 streamlit run app.py
+
+
+
+
+## ⚙️ Design Notes
+
+- Uses Groq LLMs in **classification mode** for higher reliability
+- Avoids strict JSON enforcement to prevent API failures
+- Automatically falls back to deterministic extraction if LLM extraction fails
+- Truncates web evidence to remain within model limits
+- Tested locally and deployed on Streamlit Cloud
+
